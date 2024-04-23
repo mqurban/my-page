@@ -206,6 +206,8 @@ navToggle.addEventListener("click", function () {
 
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     $(document).ready(function() {
         $('#contact-form').submit(function(event) {
             event.preventDefault(); // Prevent the default form submission
