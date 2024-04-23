@@ -203,3 +203,37 @@ navToggle.addEventListener("click", function () {
   // }
   links.classList.toggle("show-links");
 });
+
+
+
+    $(document).ready(function() {
+        $('#contact-form').submit(function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the form data
+            var formData = {
+                name: $('input[name="name"]').val(),
+                email: $('input[name="email"]').val(),
+                service: $('select[name="service"]').val(),
+                budget: $('input[name="budget"]').val(),
+                message: $('#textarea').val()
+            };
+
+            // Send the form data to Google Sheets
+            $.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbzf4NS19p-uSsI4p1Iw-e5y1mviDjRSlc4Q_QlDcN6kD9U-vmjiMOOlERwQrpBZCTSQVg/exec',
+                type: 'POST',
+                data: formData,
+                success: function(response) {
+                    // Reset the form fields
+                    $('#contact-form')[0].reset();
+                    // Show a success message
+                    $('.ajax-response').html('Form submitted successfully!');
+                },
+                error: function(xhr, status, error) {
+                    // Show an error message
+                    $('.ajax-response').html('Error submitting form: ' + error);
+                }
+            });
+        });
+    });

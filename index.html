@@ -1183,18 +1183,34 @@
                                     <i class="fa fa-user"></i>
                                     <input type="text" name="name" placeholder="Your Name" required>
                                 </div>
-
+                    
                                 <div class="contact-form-item">
                                     <i class="fa fa-envelope"></i>
                                     <input type="email" name="email" placeholder="Enter Your Email" required>
                                 </div>
-
+                    
+                                <div class="contact-form-item">
+                                    <i class="fa fa-list"></i>
+                                    <select name="service" required>
+                                        <option value="" disabled selected>Select Service</option>
+                                        <option value="Figma to HTML, CSS">Figma to HTML, CSS</option>
+                                        <option value="WordPress Website">WordPress Website</option>
+                                        <option value="WordPress Theme">WordPress Theme</option>
+                                        <option value="WordPress Plugins">WordPress Plugins</option>
+                                        <option value="Bug Fixing">Bug Fixing</option>
+                                    </select>
+                                </div>
+                    
+                                <div class="contact-form-item">
+                                    <i class="fa fa-money-bill-alt"></i>
+                                    <input type="number" name="budget" placeholder="Budget ($200 - $5000)" min="200" max="5000" required>
+                                </div>
+                    
                                 <div class="contact-form-item">
                                     <i class="fa fa-comment-dots"></i>
-                                    <textarea name="message" id="textarea" placeholder="Your Message" required cols="30"
-                                        rows="6"></textarea>
+                                    <textarea name="message" id="textarea" placeholder="Your Message" required cols="30" rows="6"></textarea>
                                 </div>
-
+                    
                                 <div class="submit-btn">
                                     <input type="submit" class="btn btn-primary">
                                 </div>
@@ -1202,6 +1218,7 @@
                             <p class="ajax-response"></p>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
